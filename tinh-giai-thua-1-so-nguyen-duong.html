@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh giai thua 1 so nguyen duong</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhap so nguyen duong");
+    let factorial = 1;
+
+    if (n < 1) {
+        alert("n ko phai la so nguyen duong")
+        let n = +prompt("nhap lai so n: ");
+        for (let i = 1; i <= n; i++) {
+            factorial = factorial * i;
+            console.log(factorial);
+        }
+    } else {
+        for (let i = 1; i <= n; i++) {
+            factorial = factorial * i;
+            console.log(factorial);
+        }
+    }
+
+
+</script>
+</body>
+</html>

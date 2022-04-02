@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh lai suat ngan hang</title>
+</head>
+<body>
+<p>Nhap vao so tien vay ban dau:<input id="monney" type="text"></p>
+<p>Nhap vao so thang cho vay: <input id="month" type="text"></p>
+<p>Nhap vao lai xuat hang thang (%):<input id="rate" type="text"></p>
+<p><input onclick="tinh()" type="button" value="Tinh"></p>
+<p id="lai"></p>
+<script>
+    function tinh() {
+        let monney = +document.getElementById("monney").value;
+        let month = +document.getElementById("month").value;
+        let rate = +document.getElementById("rate").value;
+        let i = 1;
+        let T=monney;
+        while (i <= month) {
+            T = T + T * rate / 100;
+            i = i + 1;
+
+        }
+        let lai = T - monney;
+        // lai = Math.round(lai)
+        document.getElementById("lai").innerHTML = "so tien lai phai tra la: " + lai + "tr vnd"
+
+    }
+
+</script>
+</body>
+</html>
